@@ -22,3 +22,127 @@ main {
   margin: 0;
   overflow-y: auto;
 }
+
+
+.login-page {
+  min-height: 100vh;
+  background: #e9e9e9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.login-card {
+  width: 670px;
+  height: 782px;
+  background: #000000;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  padding-top: 40px;
+}
+
+.login-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+.login-title {
+  font-family: "Cinzel", serif;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 150%;
+  color: #ffffff;
+  text-align: center;
+  margin: 0 0 56px 0;
+}
+
+.login-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-input {
+  width: 303px;
+  height: 37px;
+  background: #e6e4e5;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  margin-bottom: 44px;
+  text-align: center;
+  font-family: "Cinzel", serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 150%;
+  letter-spacing: 0.6em;
+  color: #9c9a9b;
+  text-transform: uppercase;
+  padding: 0 14px;
+  box-sizing: border-box;
+}
+
+.login-input::placeholder {
+  color: #9c9a9b;
+  opacity: 1;
+}
+
+.login-button {
+  margin-top: 6px;
+  min-width: 132px;
+  height: 42px;
+  border: none;
+  border-radius: 10px;
+  background: #e6e4e5;
+  color: #9c9a9b;
+  font-family: "Cinzel", serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.login-button:hover {
+  opacity: 0.92;
+  transform: scale(1.02);
+}
+
+.login-button:active {
+  transform: scale(0.98);
+}
+
+@media (max-width: 768px) {
+  .login-card {
+    width: 100%;
+    max-width: 670px;
+    height: auto;
+    min-height: 782px;
+    padding: 32px 20px 40px;
+  }
+
+  .login-logo img {
+    width: 200px;
+    height: auto;
+  }
+
+  .login-title {
+    font-size: 26px;
+    margin-bottom: 44px;
+  }
+
+  .login-input {
+    width: 100%;
+    max-width: 303px;
+    font-size: 18px;
+    letter-spacing: 0.35em;
+  }
+}
