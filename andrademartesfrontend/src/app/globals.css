@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  overflow-y: auto;
+}
+
+.antialiased {
+  display: flex;
+  overflow: hidden;
+}
+
+main {
+  width: 85rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainContainer {
+  margin: 0;
+  overflow-y: auto;
+}
