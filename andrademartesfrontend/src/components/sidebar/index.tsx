@@ -2,8 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import "./style.css";
 import { MdDashboard, MdChatBubble, MdSettings } from "react-icons/md";
-import { FaUser, FaHome } from "react-icons/fa";
-import { FaClipboardUser } from "react-icons/fa6";
+import { FaHome } from "react-icons/fa";
+import { RiAdminFill } from "react-icons/ri";
 
 
 export function Sidebar() {
@@ -12,8 +12,8 @@ export function Sidebar() {
             <div className="sideBar">
                 <nav>
                     <header>
-                        <Link href='/inicio' className="linkHeader">
-                            <img src="/andrademartesLogoBranco.svg" alt="" />
+                        <Link href='/logged/inicio' className="linkHeader">
+                            <img src="/logobranca.png" alt="" />
 
                             <h1>AndradeMartes</h1>
                         </Link>
@@ -21,18 +21,18 @@ export function Sidebar() {
 
                     <div className="sideBarItens">
                         <ul>
-                            <Link href='/inicio'>
+                            <Link href='/logged/inicio'>
                                 <li><FaHome className="icon" /> Início</li>
                             </Link>
-                            <Link href='/dashboard'>
+                            <Link href='/logged/dashboard'>
                                 <li><MdDashboard className="icon" /> Dashboard</li>
                             </Link>
-                            <Link href='/conversas'>
+                            <Link href='/logged/conversas'>
                                 <li><MdChatBubble className="icon" /> Conversas</li>
                             </Link>
-                            <li><FaUser className="icon" /> Usuários</li>
-                            <li><FaClipboardUser className="icon" /> Leads</li>
-                            <li><MdSettings className="icon" /> Configurações</li>
+                            <Link href='/logged/admin'>
+                                <li><RiAdminFill className="icon" /> Admin</li>
+                            </Link>
                         </ul>
                     </div >
                 </nav >

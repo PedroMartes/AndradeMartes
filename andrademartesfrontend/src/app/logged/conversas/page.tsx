@@ -30,7 +30,7 @@ export default async function Dashboard() {
 
                     {data.posts.map(post => (
 
-                        <Link key={post.id} href={`/conversa/${post.id}`}>
+                        <Link key={post.id} href={`/logged/conversas/conversa/${post.id}`}>
                             <div className="conversaCard">
                                 <h2 className="conversaCardTitle">{post.title}</h2>
                             </div>

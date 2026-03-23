@@ -1,7 +1,7 @@
 .sideBar {
-    background: rgb(18, 18, 18);
+    background: #9C9C9C;
     height: 100vh;
-    color: white;
+    color: black;
     padding: 1rem;
     width: 15rem;
 }
@@ -19,8 +19,8 @@ header {
 }
 
 header img {
-    width: 4rem;
-    height: 4rem;
+    width: 9rem;
+    height: 8rem;
 }
 
 .sideBarItens ul {
@@ -38,7 +38,7 @@ header img {
 }
 
 .sideBarItens ul li:hover {
-    background: rgb(74, 74, 74);
+    background: #8D1414;
     color: white;
     cursor: pointer;
 }
