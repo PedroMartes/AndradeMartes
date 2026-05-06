@@ -1,9 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import "./style.css";
-import { MdDashboard, MdChatBubble, MdSettings } from "react-icons/md";
+import { MdChatBubble } from "react-icons/md";
 import { FaHome } from "react-icons/fa";
 import { RiAdminFill } from "react-icons/ri";
+import { IoPeopleSharp } from "react-icons/io5";
 
 
 export function Sidebar() {
@@ -24,8 +25,8 @@ export function Sidebar() {
                             <Link href='/logged/inicio'>
                                 <li><FaHome className="icon" /> Início</li>
                             </Link>
-                            <Link href='/logged/dashboard'>
-                                <li><MdDashboard className="icon" /> Dashboard</li>
+                            <Link href='/logged/leads'>
+                                <li><IoPeopleSharp className="icon" /> Leads</li>
                             </Link>
                             <Link href='/logged/conversas'>
                                 <li><MdChatBubble className="icon" /> Conversas</li>

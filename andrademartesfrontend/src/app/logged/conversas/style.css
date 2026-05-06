@@ -1,72 +1,163 @@
+/* src/app/logged/conversas/style.css */
+
+/* Container Principal - Fixa a altura na tela toda */
 .conversasMainContainer {
-    width: 100%;
-    padding: 1%;
+    display: flex;
+    flex-direction: column;
+    height: 100vh; 
+    width: 200vh;
+    background-color: #f8f9fa;
+    overflow: hidden; /* Impede o scroll do body */
+}
+
+/* Header - Fica sempre parado no topo */
+.conversasHeader {
+    padding: 1rem 1rem;
+    flex-shrink: 0;
 }
 
 .pageTitle {
-    font-size: 3rem;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0;
+}
+
+.subtitle {
+    color: #6c757d;
+    font-size: 0.9rem;
+    margin-top: 4px;
+}
+
+/* Área de Scroll - Onde as conversas rolam */
+.conversasScrollArea {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 1rem;
 }
 
 .coversaCardsContainer {
-    width: 100%;
-    max-height: 100vh;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    overflow: auto;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+/* Cards */
+.conversaLink {
+    text-decoration: none;
+    color: inherit;
+    display: block;
 }
 
 .conversaCard {
-    border: 1px solid black;
+    background: white;
     padding: 1rem;
-    margin: 0 0 2rem;
-    max-width: 18rem;
-    height: 9rem;
-    overflow: hidden;
-    cursor: pointer;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 1px solid #e9ecef;
+}
+
+.conversaCard:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    border-color: #00a884;
+}
+
+/* Avatar */
+.conversaAvatar {
+    width: 50px;
+    height: 50px;
+    background-color: #00a884;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.groupAvatar {
+    background-color: #25d366;
+    border-radius: 12px; /* Avatares de grupo levemente quadrados */
+}
+
+/* Detalhes */
+.conversaDetails {
+    flex-grow: 1;
+    min-width: 0; /* Essencial para o truncate funcionar */
+}
+
+.conversaTopRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4px;
 }
 
 .conversaCardTitle {
-    margin: 0 0 1rem 0;
-    font-size: large;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-.modalOverlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+.chatTime {
+    font-size: 0.75rem;
+    color: #8696a0;
+}
+
+.conversaBottomRow {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    z-index: 1000;
 }
 
-.modalContent {
-    background: white;
-    padding: 2rem;
-    border-radius: 8px;
-    max-width: 500px;
-    width: 90%;
-    max-height: 80vh;
-    overflow-y: auto;
+.lastMsgPreview {
+    font-size: 0.85rem;
+    color: #667781;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-.modalContent h2 {
-    margin-top: 0;
-}
-
-.modalContent button {
-    margin-top: 1rem;
-    padding: 0.5rem 1rem;
-    background: #0070f3;
+.unreadBadge {
+    background-color: #25d366;
     color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+    font-size: 0.7rem;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 10px;
+    min-width: 18px;
+    text-align: center;
 }
 
-.modalContent button:hover {
-    background: #0051cc;
+/* Scrollbar Estilizada */
+.conversasScrollArea::-webkit-scrollbar {
+    width: 6px;
+}
+
+.conversasScrollArea::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.conversasScrollArea::-webkit-scrollbar-thumb {
+    background: #cbd5e0;
+    border-radius: 10px;
+}
+
+.errorMessage, .emptyState {
+    text-align: center;
+    padding: 3rem;
+    color: #667781;
 }
